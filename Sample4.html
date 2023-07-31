@@ -1,0 +1,32 @@
+<html>
+<body>
+
+<h2>HTML Forms</h2>
+
+<form>
+  <fieldset>
+    <legend>Enter ur Information</legend>
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" maxlength="10" ><br>
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" maxlength="10" ><br>
+  <label for="pwd">Password</label><br>
+  <input type="password" id="pwd" name="pwd" minlength="6" maxlength="12"><br><br>
+  <label for="dob">Dob:</label>
+  <input type="date" id="dob" name="dob"><br><br>
+  <label for="lname">Email</label><br>
+  <input type="text" id="email" name="email" ><br><br>
+  <label for="mail">Choose the type of mail id:</label>
+  <select id="mail" name="mail">
+    <option value="gmail">Gmail</option>
+    <option value="yahoo">Yahoo</option>
+    <option value="outlook">Outlook</option>
+    <option value="hotmail">Hotmail</option>
+  </select><br><br>
+  <button type="button" onclick="alert('The form has been submitted')">Submit</button>
+  <input type="reset">
+  </fieldset>
+</form> 
+</body>
+</html>
+

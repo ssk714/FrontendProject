@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Arrays</h1>
+<p id="initial"></p>
+<p id="demo"></p>
+<p id="loop"></p>
+<p id="insert"></p>
+<p id="join"></p>
+<p id="pop1"></p>
+<p id="pop2"></p>
+<p id="shift1"></p>
+<p id="shift2"></p>
+<p id="unshift"></p>
+<p id="initial2"></p>
+<p id="concat"></p>
+<p id="splice1"></p>
+<p id="splice2"></p>
+<p id="slice"></p>
+<p>Click Below one to publish the complete date </p>
+<button onclick="myFunction()">Click here</button>
+<p id="date"></p>
+<p>Click Below one to publish the desired date </p>
+<button onclick="myFunction1()">Click here</button>
+<p id="date2"></p>
+<script>
+const cars = ["Apple","Nokia","Samsung"];
+document.getElementById("initial").innerHTML = "The Initial Array "+cars;
+cars[0] = "Redmi";
+document.getElementById("demo").innerHTML = "The Modified array using index "+cars;
+let fLen = cars.length;
+let text = "<ul>";
+for (let i = 0; i < fLen; i++) {
+  text += "<li>" + cars[i] + "</li>";
+}
+text += "</ul>";
+document.getElementById("loop").innerHTML = "The Modified array using looping and listing"+text;
+cars.push("Realme");
+document.getElementById("insert").innerHTML = "The Modified array using inserting new element "+cars;
+document.getElementById("join").innerHTML = "The Modified array by joining them by (/)  "+cars.join(" / ");
+document.getElementById("pop1").innerHTML = "The Deleted item using pop "+cars.pop();
+document.getElementById("pop2").innerHTML = "The array after deleting the item "+cars;
+document.getElementById("shift1").innerHTML = "The Deleted item using shift "+cars.shift();
+document.getElementById("shift2").innerHTML = "The array after deleting the item "+cars;
+cars.unshift("Apple");
+document.getElementById("unshift").innerHTML = "The Modified array after inserting new element using unshift "+cars;
+const p1=["Volkswagen","Honda","Hyundai"];
+const p2=["Realme","Redmi","Nothing"];
+const p3=cars.concat(p1,p2);
+document.getElementById("initial2").innerHTML = "The Arrays to be merged are 1. "+p1+" 2. "+p2;
+document.getElementById("concat").innerHTML = "The New array after merging three arrays "+p3;
+let removed = cars.splice(1, 2, p2[0], p2[1], p2[2]); 
+document.getElementById("splice1").innerHTML = "The new array after splicing" + cars;
+document.getElementById("splice2").innerHTML = "The removed items " + removed;
+document.getElementById("slice").innerHTML = "The new array after slicing" + cars.slice(1,4); 
+function myFunction() {
+    const d = new Date();
+    document.getElementById("date").innerHTML = d;
+}
+function myFunction1() {
+    const d = new Date(2018, 11, 24, 10, 33, 30, 0);
+    document.getElementById("date2").innerHTML = d;
+}
+</script>
+</body>
+</html>
+
